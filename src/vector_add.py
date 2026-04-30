@@ -47,12 +47,3 @@ def add(
     
     return z
  
-def main():
-    torch.manual_seed(42)
-    x = torch.rand((1024*100 + 512,), dtype=torch.float32, device=DEVICE)
-    y = torch.rand((1024*100 + 512,), dtype=torch.float32, device=DEVICE)
-    z = add(x, y)
-    print(z.allclose(x + y))
-    
-if __name__ == '__main__':
-    main()
